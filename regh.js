@@ -17,9 +17,7 @@ document.getElementById("reg").addEventListener("submit",function(e){
         })
 
     })
-    .then(res=>{
-        res.text();
-    })
+    .then(res=>res.text())
     .then(data=>{
         alert(data);
     })
