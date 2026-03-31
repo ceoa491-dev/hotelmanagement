@@ -18,10 +18,11 @@ document.getElementById("reg").addEventListener("submit",function(e){
 
     })
     .then(res=>res.text())
-    .then(data=>{
+    .then(data=>{console.log(data);
         alert(data);
     })
     .catch(err=>{
         console.error(err);
+        alert("error occcured");
     })
 })
