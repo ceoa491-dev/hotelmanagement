@@ -9,12 +9,12 @@
         <label class="h">Hotel Management</label>
         <div class="container">
         <div class="card1">
-            <form name="creg" method="POST">
+            <form id="creg" method="POST">
                 <label>Register</label>
-                <input type="text" name="name" placeholder="Enter Name" required><br><br>
-                <input type="text" name="phone" placeholder="Enter Phone NO" required><br><br>
-                <input type="email" name="email" placeholder="Enter Email" required><br><br>
-                <input type="password" name="pass" placeholder="Enter Password" required><br><br>
+                <input type="text" id="name" placeholder="Enter Name" required><br><br>
+                <input type="text" id="phone" placeholder="Enter Phone NO" required><br><br>
+                <input type="email" id="email" placeholder="Enter Email" required><br><br>
+                <input type="password" id="pass" placeholder="Enter Password" required><br><br>
                 <button type="submit" name="submit">Register</button>
                 <button type="reset" name="reset">Cancel</button>
                 <p>Already have an Account? </p>
@@ -24,5 +24,6 @@
             </form>
         </div>
         </div>
+        <script src="creg.js"></script>
     </body>
 </html>
