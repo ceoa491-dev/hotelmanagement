@@ -13,7 +13,13 @@ document.getElementById("log").addEventListener("submit",function(e){
     .then(res=>res.json())
     .then(data=>{
         if(data.status==="success"){
+            localStorage.setItem("hname",data.hname);
+            localStorage.setItem("name",data.name);
+            localStorage.setItem("email",data.email);
+            localStorage.setItem("phone",data.phone);
             alert("logged successful");
+            window.location.href="home.html"
+            
         }
         else{
             alert("failed to log");
