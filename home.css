@@ -1,5 +1,10 @@
 body{
     margin: 0;
-    background-color: sandybrown;
+    background-color: rgb(216, 107, 12);
     height: 100vh;
+}
+.namehotel{
+    font-family: Showcard Gothic;
+    color: white;
+    font-size: 70px;
 }
