@@ -6,9 +6,71 @@
         <link rel="stylesheet" href="home.css">
     </head>
     <body>
+        <div id="head" class="head">
+        <h1 id="namehotel" class="namehotel" >Hello</h1>
+        <h1 id="namehotel" class="namehotel" >Hello</h1>
+      <img id="ac" class="ac" src="11205101b671b65954ed09e07bb0f06a.png">
+    </div>
+    <div id="btnscard" class="btnscard">
         
-        <h1 id="namehotel" class="namehotel"></h1>
+        <div id="cardin" class="cardin">
+            <button id="addr" class="addr">Add Rooms</button>
+            <button id="viewr" class="viewr">View Rooms</button>
+            <button id="addf" class="addf">Add Foods</button>
+            <button id="viewf" class="viewf">View Foods</button>
+            <button id="addw" class="addw">Add Workers</button>
+            <button id="vieww" class="vieww">View Workers</button>
+            <button id="res" class="res">Reserved Rooms</button>
+        </div>
         
+    </div>
+    <div id="lis" class="lis">
+        <div id="lisin" class="lisin">
+            <div id="carditems" class="carditems">
+                <img src="" id="roomim" class="roomim"><br><br>
+                
+                <label id="roomno" class="roomno">Room No : </label>
+                <label id="roomprice" class="roomprice">Price : </label>
+                </div>
+            
+        </div>
+    </div>
+    <div id="lisf" class="lisf">
+        <div id="lisinf" class="lisinf">
+            <div id="carditemsf" class="carditemsf">
+                <img src="" id="fimg" class="fimg"><br><br>
+                
+                <label id="dish" class="dish">Dish :  </label>  
+                <label id="dprice" class="dprice">Price : </label>
+                </div>
+            
+        </div>
+    </div>
+    <div id="addr_form" class="addr_form">
+        <div id="addr_formin" class="addr_formin">
+            <form id="formw" class="formw" enctype="multipart/form-data">
+                <label style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder; font-size: x-large;">ADD ROOM</label><br><br>
+                <input type="text" id="txtno" class="txtno" placeholder="Enter Room No...."><br><br>
+                <input type="text" id="txtprice" class="txtprice" placeholder="Enter Room Price...."><br><br>
+                <input type="file" id="imgupp" class="imgupp" value="Upload Images" multiple><br><br>
+                <button type="submit" id="subrr" class="subrr">Save</button>
+                <button type="reset" id="reset" class="reset">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="addf_form" class="addf_form">
+        <div id="addf_formin" class="addf_formin">
+            <form id="formw2" class="formw2" enctype="multipart/form-data">
+                <label style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder; font-size: x-large;">ADD FOOD</label><br><br>
+                <input type="text" id="dis" class="dis" placeholder="Dish Name...."><br><br>
+                <input type="text" id="dispice" class="disprice" placeholder="Enter Dish Price...."><br><br>
+                <input type="file" id="imgupp2" class="imgupp2" value="Upload Images"><br><br>
+                <button type="submit" id="subrr2" class="subrr2">Save</button>
+                <button type="reset" id="reset2" class="reset2">Cancel</button>
+            </form>
+        </div>
+    </div>
         <script src="home.js"></script>
     </body>
 </html>
