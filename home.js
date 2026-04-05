@@ -1,6 +1,7 @@
 window.onload=function(){
 let hotelname=localStorage.getItem("hname");
 document.getElementById("namehotel").innerText=hotelname;
+console.log(hotelname);
 }
 document.getElementById("addr").addEventListener("click",function(e){
     e.preventDefault();
