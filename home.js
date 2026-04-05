@@ -4,7 +4,7 @@ document.getElementById("namehotel").innerText=hotelname;
 }
 document.getElementById("addr").addEventListener("click",function(e){
     e.preventDefault();
-    document.getElementById("subrr").addEventListener("submit",function(e){
+    document.getElementById("formw").addEventListener("submit",function(e){
         e.preventDefault();
         let txtno=document.getElementById("txtno").value;
         let txtprice=document.getElementById("txtprice").value;
