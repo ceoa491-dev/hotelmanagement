@@ -21,9 +21,9 @@ body{
 }
 .head{
     display: flex;
-    align-items: left;
-    gap: 80%;
-    margin-top: 0%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 .ac{
     height: 70px;
@@ -41,7 +41,7 @@ body{
     font-family: Showcard Gothic;
     color: white;
     font-size: 70px;
-    margin-left: -40%;
+    margin-left: 0px;
 }
 .btnscard{
 display: flex;
