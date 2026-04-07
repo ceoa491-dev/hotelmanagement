@@ -82,11 +82,7 @@ document.getElementById("viewr").addEventListener("click",function(e){
                  document.getElementById("popupimg").src=image.src;
                  document.getElementById("cls").style.display="flex";
                 })
-                document.getElementById("cls").addEventListener("click",function(){
-                    this.style.display="none"
-                    document.getElementById("pop").style.display="none";
-                    document.getElementById("popupimg").style.display="none";
-                })
+                
                 imagecontainer.appendChild(image);
             })
             let roomno=document.createElement("label");
@@ -101,6 +97,11 @@ document.getElementById("viewr").addEventListener("click",function(e){
             container.appendChild(card);
             
         })
+        document.getElementById("cls").addEventListener("click",function(){
+                    this.style.display="none"
+                    document.getElementById("pop").style.display="none";
+                    
+                })
     })
     .catch(err=>{
         console.error(err);
