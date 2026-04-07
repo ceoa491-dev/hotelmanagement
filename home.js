@@ -61,6 +61,40 @@ document.getElementById("addf").addEventListener("click",function(e){
 document.getElementById("viewr").addEventListener("click",function(e){
     e.preventDefault();
     document.getElementById("lis").style="display:flex";
+    fetch("https://hotelmanagementbackend-production-a758.up.railway.app/getrooms")
+    .then(res=>res.json())
+    .then(data=>{
+        let container=document.getElementById("lisin");
+        container.innerHTML="";
+        data.forEach(room=>{
+            let card=document.createElement("div");
+            card.className="carditems";
+            let imagecontainer=document.createElement("div");
+            imagecontainer.style.display="flex";
+            imagecontainer.style.gap="10px";
+            room.images.forEach(img=>{
+                let image=document.createElement("img");
+                image.src="data:images/jpeg;base64,"+img;
+                image.className="roomim";
+                imagecontainer.appendChild(image);
+            })
+            let roomno=document.createElement("label");
+            roomno.className="roomno";
+            roomno.innerText="Room No : "+room.txtno;
+            let price=document.createElement("label");
+            price.className="roomprice";
+            price.innerText="Price : "+room.txtprice;
+            card.appendChild(imagecontainer);
+            card.appendChild(roomno);
+            card.appendChild(price);
+            container.appendChild(card);
+
+        })
+    })
+    .catch(err=>{
+        console.error(err);
+        alert("Error Loading Rooms");
+    })
 })
 document.getElementById("viewf").addEventListener("click",function(e){
     e.preventDefault();
