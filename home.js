@@ -89,6 +89,8 @@ document.getElementById("viewr").addEventListener("click",function(e){
             card.appendChild(roomno);
             card.appendChild(price);
             container.appendChild(card);
+            document.createElement("br");
+            document.createElement("br");
 
         })
     })
