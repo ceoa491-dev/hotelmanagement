@@ -75,7 +75,7 @@ justify-content: space-between;
 .carditems{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
         height: 250px;
     width: 85%;
 background-color: rgb(235, 177, 70);
@@ -90,6 +90,9 @@ padding: 6px;
     border: 1px solid white;
     border-radius: 4px;
     margin:auto;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 60%;
     transition: all 0.2s ease-in-out;
 
 }
