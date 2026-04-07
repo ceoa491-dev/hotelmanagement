@@ -57,6 +57,7 @@ justify-content: center;
 }
 .lisin{
     display: flex;
+    flex-direction: column;
     height: auto;
     max-height: 900px;
     width: 82%;
