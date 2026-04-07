@@ -78,16 +78,10 @@ document.getElementById("viewr").addEventListener("click",function(e){
                 image.src="data:image/jpeg;base64,"+img;
                 image.className="roomim";
                 image.addEventListener("click",function(){
-                    if(image.style.height==="500px"){
-                        image.style.height="140px";
-                        image.style.height="140px";
-
-                    }
-                    else{
-                        image.style.height="500px";
-                        image.style.width="500px";
-                    }
+                 document.getElementById("pop").style.display="flex";
+                 document.getElementById("popupimg").src=image.src;
                 })
+            
                 imagecontainer.appendChild(image);
             })
             let roomno=document.createElement("label");
