@@ -69,6 +69,7 @@ justify-content: center;
 border: 1px solid black;
 border-radius: 10px;
 padding: 20px;
+justify-content: space-between;
 }
 .carditems{
     display: flex;
@@ -88,6 +89,7 @@ padding: 6px;
     border-radius: 4px;
     margin:auto;
     transition: all 0.2s ease-in-out;
+
 }
 
 .roomim:hover{

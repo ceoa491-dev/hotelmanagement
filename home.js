@@ -77,6 +77,17 @@ document.getElementById("viewr").addEventListener("click",function(e){
                 let image=document.createElement("img");
                 image.src="data:image/jpeg;base64,"+img;
                 image.className="roomim";
+                image.addEventListener("click",function(){
+                    if(image.style.height==="500px"){
+                        image.style.height="140px";
+                        image.style.height="140px";
+
+                    }
+                    else{
+                        image.style.height="500px";
+                        image.style.width="500px";
+                    }
+                })
                 imagecontainer.appendChild(image);
             })
             let roomno=document.createElement("label");
@@ -90,9 +101,6 @@ document.getElementById("viewr").addEventListener("click",function(e){
             card.appendChild(price);
             container.appendChild(card);
             
-        })
-        document.getElementById("img").addEventListener("click",function(e){
-            document.getElementById("img").style="height:500px width=500px";
         })
     })
     .catch(err=>{
