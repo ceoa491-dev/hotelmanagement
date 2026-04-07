@@ -80,8 +80,11 @@ document.getElementById("viewr").addEventListener("click",function(e){
                 image.addEventListener("click",function(){
                  document.getElementById("pop").style.display="flex";
                  document.getElementById("popupimg").src=image.src;
+                 document.getElementById("cls").style.display="flex";
                 })
-            
+                document.getElementById("cls").addEventListener("click",function(){
+                    this.style.display="none"
+                })
                 imagecontainer.appendChild(image);
             })
             let roomno=document.createElement("label");
