@@ -61,7 +61,7 @@ document.getElementById("addf").addEventListener("click",function(e){
 document.getElementById("viewr").addEventListener("click",function(e){
     e.preventDefault();
     document.getElementById("lis").style="display:flex";
-    fetch("https://hotelmanagementbackend-production-a758.up.railway.app/getrooms")
+    fetch("https://hotelmanagementbackend-production-a758.up.railway.app/getroom")
     .then(res=>res.json())
     .then(data=>{
         let container=document.getElementById("lisin");
