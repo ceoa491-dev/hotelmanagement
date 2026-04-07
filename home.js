@@ -64,6 +64,7 @@ document.getElementById("viewr").addEventListener("click",function(e){
     fetch("https://hotelmanagementbackend-production-a758.up.railway.app/getroom")
     .then(res=>res.json())
     .then(data=>{
+        console.log(data);
         let container=document.getElementById("lisin");
         container.innerHTML="";
         data.forEach(room=>{
@@ -74,7 +75,7 @@ document.getElementById("viewr").addEventListener("click",function(e){
             imagecontainer.style.gap="10px";
             room.images.forEach(img=>{
                 let image=document.createElement("img");
-                image.src="data:images/jpeg;base64,"+img;
+                image.src="data:image/jpeg;base64,"+img;
                 image.className="roomim";
                 imagecontainer.appendChild(image);
             })
