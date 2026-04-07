@@ -91,6 +91,9 @@ document.getElementById("viewr").addEventListener("click",function(e){
             container.appendChild(card);
             
         })
+        document.getElementById("img").addEventListener("click",function(e){
+            document.getElementById("img").style="height:500px width=500px";
+        })
     })
     .catch(err=>{
         console.error(err);
