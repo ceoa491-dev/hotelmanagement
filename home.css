@@ -81,6 +81,7 @@ background-color: rgb(235, 177, 70);
 border: 1px solid black;
 border-radius: 10px;
 padding: 6px;
+margin-bottom: 10px;
 }
 .roomim{
     height: 140px;
@@ -155,6 +156,7 @@ background-color: rgb(235, 177, 70);
 border: 1px solid black;
 border-radius: 10px;
 padding: 6px;
+margin-bottom: 10px;
 }
 .fimg{
     height: 40px;
