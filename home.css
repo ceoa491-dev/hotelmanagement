@@ -420,15 +420,3 @@ input{
     transform: translateY(2px);
     background-color:rgb(235, 77, 77);
 }
-.detailsbox{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-end;
-}
-.imgbox{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    max-width: 60%;
-}
