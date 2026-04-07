@@ -382,19 +382,6 @@ input{
     transform: translateY(2px);
     background-color: rgb(36, 185, 36);
 }
-.reset2{
-    height: 40px;
-    width: 100px;
-    background-color: red;
-    color: white;
-    border: 1px solid black;
-    border-radius: 4px;
-    transition: all 0.2s ease-in-out;
-}
-.reset2:hover{
-    transform: translateY(2px);
-    background-color:rgb(235, 77, 77);
-}
 .pop{
     display: none;
     position: fixed;
@@ -409,4 +396,17 @@ input{
 .popupimg{
     max-width: 90%;
     max-height: 90%;
+}
+.reset2{
+    height: 40px;
+    width: 100px;
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+.reset2:hover{
+    transform: translateY(2px);
+    background-color:rgb(235, 77, 77);
 }
