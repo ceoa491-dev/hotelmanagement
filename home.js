@@ -68,11 +68,10 @@ document.getElementById("viewr").addEventListener("click",function(e){
         let container=document.getElementById("lisin");
         container.innerHTML="";
         data.forEach(room=>{
-            let card=document.createElement("div");
-            card.className="carditems";
-            let imagecontainer=document.createElement("div");
-            imagecontainer.style.display="flex";
-            imagecontainer.style.gap="10px";
+            let card = document.createElement("div");
+                card.className = "carditems";   
+                let imagecontainer = document.createElement("div");
+                imagecontainer.className = "imgbox";
             room.images.forEach(img=>{
                 let image=document.createElement("img");
                 image.src="data:image/jpeg;base64,"+img;
@@ -85,16 +84,20 @@ document.getElementById("viewr").addEventListener("click",function(e){
                 
                 imagecontainer.appendChild(image);
             })
+
+// RIGHT → DETAILS CONTAINER
+let details=document.createElement("div");
+details.className="detailsbox";
             let roomno=document.createElement("label");
             roomno.className="roomno";
             roomno.innerText="Room No : "+room.txtno;
             let price=document.createElement("label");
             price.className="roomprice";
             price.innerText="Price : "+room.txtprice;
+            details.appendChild(roomno);
+            details.appendChild(price);
             card.appendChild(imagecontainer);
-            card.appendChild(roomno);
-            card.appendChild(price);
-            container.appendChild(card);
+            card.appendChild(details)
             
         })
         document.getElementById("cls").addEventListener("click",function(){
