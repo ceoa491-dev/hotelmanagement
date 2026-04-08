@@ -55,6 +55,7 @@ document.getElementById("formw2").addEventListener("submit",function(e){
     let dis=document.getElementById("dis").value;
     let disprice=document.getElementById("disprice").value;
     let files2=document.getElementById("imgupp2").files;
+    console.log(disprice);
     let formData2=new FormData();
     formData2.append("dis",dis);
     formData2.append("disprice",disprice);
