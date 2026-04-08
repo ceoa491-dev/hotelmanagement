@@ -53,11 +53,11 @@ document.getElementById("addf").addEventListener("click",function(e){
 document.getElementById("formw2").addEventListener("submit",function(e){
     e.preventDefault();
     let dis=document.getElementById("dis").value;
-    let disprice=document.getElementById("dispice").value;
+    let disprice=document.getElementById("disprice").value;
     let files2=document.getElementById("imgupp2").files;
     let formData2=new FormData();
     formData2.append("dis",dis);
-    formData2.append("disprice",dispice);
+    formData2.append("disprice",disprice);
     for(let i=0;i<files2.length;i++){
         formData2.append("images",files2[i]);
     }
