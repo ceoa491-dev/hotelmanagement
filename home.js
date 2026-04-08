@@ -169,10 +169,10 @@ document.getElementById("viewf").addEventListener("click",function(e){
             })
             let dis=document.createElement("label");
             dis.className="dis";
-            dis.innerText="Dish : "+dis;
+            dis.innerText="Dish : "+food.dis;
             let disprice=document.createElement("label");
             disprice.className="disprice";
-            disprice.innerText="Price : "+disprice;
+            disprice.innerText="Price : "+food.disprice;
             cardf.appendChild(imagecontainerf);
             cardf.appendChild(dis);
             cardf.appendChild(disprice);
