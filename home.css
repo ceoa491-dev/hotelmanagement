@@ -167,8 +167,8 @@ padding: 6px;
 margin-bottom: 10px;
 }
 .fimg{
-    height: 40px;
-    width: 40px;
+    height: 140px;
+    width: 140px;
     border: 1px solid white;
     border-radius: 4px;
     margin:auto;
@@ -176,8 +176,8 @@ margin-bottom: 10px;
 }
 
 .fimg:hover{
-    height: 50px;
-    width: 50px;
+    height: 150px;
+    width: 150px;
 }
 .dish{
     font-family: Arial, Helvetica, sans-serif;

@@ -168,10 +168,10 @@ document.getElementById("viewf").addEventListener("click",function(e){
 
             })
             let dis=document.createElement("label");
-            dis.className="dis";
+            dis.className="dish";
             dis.innerText="Dish : "+food.dis;
             let disprice=document.createElement("label");
-            disprice.className="disprice";
+            disprice.className="dprice";
             disprice.innerText="Price : "+food.disprice;
             cardf.appendChild(imagecontainerf);
             cardf.appendChild(dis);
