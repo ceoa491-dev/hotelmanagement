@@ -1,3 +1,5 @@
+const { forwardRef } = require("react");
+
 window.onload=function(){
 let hotelname=localStorage.getItem("hname");
 document.getElementById("namehotel").innerText=hotelname;
@@ -49,6 +51,36 @@ document.getElementById("addf").addEventListener("click",function(e){
     e.preventDefault();
 
     document.getElementById("addf_form").style="display:flex";
+})
+document.getElementById("formw2").addEventListener("submit",function(e){
+    e.preventDefault();
+    let dis=document.getElementById("dis").value;
+    let disprice=document.getElementById("disprice").value;
+    let files2=document.getElementById("imgupp2").files;
+    let formData2=new FormData();
+    formData2.append("dis",dis);
+    formData2.append("disprice",disprice);
+    for(let i=0;i<files2.length;i++){
+        formData2.append("images",files2[i]);
+    }
+    fetch("https://hotelmanagementbackend-production-a758.up.railway.app/addfood",{
+        method:"POST",
+        body:formData2
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        if(data.status==="success"){
+            alert("Food Added Successfully");
+        }
+        else{
+            alert("Failed To Add Food")
+        }
+    })
+    .catch(err=>{
+        console.error(err);
+    })
+
+})
     document.getElementById("reset2").addEventListener("click",function(e){
         e.preventDefault();
         document.getElementById("addf_form").style="display:none";
@@ -57,7 +89,7 @@ document.getElementById("addf").addEventListener("click",function(e){
         document.getElementById("imgupp2").value="";
 
     })
-})
+
 document.getElementById("viewr").addEventListener("click",function(e){
     e.preventDefault();
     document.getElementById("lis").style="display:flex";
