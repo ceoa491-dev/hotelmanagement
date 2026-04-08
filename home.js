@@ -84,7 +84,7 @@ document.getElementById("formw2").addEventListener("submit",function(e){
         e.preventDefault();
         document.getElementById("addf_form").style="display:none";
         document.getElementById("dis").value="";
-        document.getElementById("dispice").value="";
+        document.getElementById("disprice").value="";
         document.getElementById("imgupp2").value="";
 
     })
