@@ -152,6 +152,7 @@ document.getElementById("viewf").addEventListener("click",function(e){
             let cardf=document.createElement("div");
             cardf.className="carditemsf";
             let imagecontainerf=document.createElement("div");
+            imagecontainerf.className="imagecontainerf";
             imagecontainerf.style.display="flex";
             imagecontainerf.style.gap="10px";
             food.images.forEach(img=>{

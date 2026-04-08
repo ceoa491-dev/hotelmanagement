@@ -147,6 +147,8 @@ justify-content: center;
     width: 82%;
     overflow-y: auto;
     overflow-x: hidden;
+    flex-direction: column;
+    gap: 30px;
 background-color: white;
 align-items: center;
 justify-content: center;
@@ -157,7 +159,7 @@ padding: 20px;
 .carditemsf{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
         height: 250px;
     width: 85%;
 background-color: rgb(235, 177, 70);
@@ -165,6 +167,11 @@ border: 1px solid black;
 border-radius: 10px;
 padding: 6px;
 margin-bottom: 10px;
+}
+.imagecontainerf {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 .fimg{
     height: 140px;
@@ -189,7 +196,7 @@ margin-bottom: 10px;
     text-align: center;
     text-align: justify;
     width: 250px;
-    margin-left: auto;
+    margin-left: 10px;
     text-align: center;
     border-radius: 4px;
 }
@@ -204,7 +211,7 @@ margin-bottom: 10px;
     color: white;
     text-align: center;
     margin-top: auto;
-    margin-left: auto;
+    margin-left: 10px;
     border-radius: 4px;
 }
 
