@@ -29,9 +29,10 @@ body{
 .card{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     gap: 30px;
+    padding: 20px;
 }
 .carditems{
     display: flex;
@@ -43,6 +44,7 @@ body{
     align-items: center;
     border: 1px solid rgb(247, 247, 247);
     border-radius: 10px;
+    
     transition: all 0.5s ease-in-out;
 }
 .hname{
