@@ -22,3 +22,7 @@ window.onload=function(){
         alert("error occured to load data");
     })
 }
+document.getElementById("carditems").addEventListener("click",function(e){
+    e.preventDefault();
+    window.location.href="userinhotel.html";
+})
