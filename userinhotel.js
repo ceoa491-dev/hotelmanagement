@@ -6,7 +6,7 @@ document.getElementById("room").addEventListener("click",function(e){
     .then(data=>{
         console.log(data);
         let container=document.getElementById("card");
-        container.innerHTML="";
+        
         data.forEach(room=>{
             let card=document.createElement("div");
             card.className="carditems";
@@ -37,14 +37,15 @@ document.getElementById("room").addEventListener("click",function(e){
             container.appendChild(card);
             
         })
-        document.getElementById("cls").addEventListener("click",function(){
-                    this.style.display="none"
-                    document.getElementById("pop").style.display="none";
-                    
-                })
+        
     })
     .catch(err=>{
         console.error(err);
         alert("Error Loading Rooms");
     })
+    document.getElementById("cls").addEventListener("click",function(){
+                    this.style.display="none"
+                    document.getElementById("pop").style.display="none";
+                    
+                })
 })
