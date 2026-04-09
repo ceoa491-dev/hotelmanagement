@@ -10,7 +10,7 @@ window.onload=function(){
         data.forEach(all=>{
             let carditems=document.createElement("div");
             carditems.className="carditems";
-            let hnamel=document.createElement("lable");
+            let hnamel=document.createElement("label");
             hnamel.className="hname";
             hnamel.innerText=all.hname;
             carditems.appendChild(hnamel);
@@ -23,6 +23,8 @@ window.onload=function(){
     })
 }
 document.getElementById("carditems").addEventListener("click",function(e){
-    e.preventDefault();
+    let item = e.target.closest(".carditems");
+    if(item){
     window.location.href="userinhotel.html";
+    }
 })
