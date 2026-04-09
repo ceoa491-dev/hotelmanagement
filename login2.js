@@ -13,7 +13,11 @@ document.getElementById("log2").addEventListener("submit",function(e){
     .then(res=>res.json())
     .then(data=>{
         if(data.status==="success"){
+            localStorage.setItem("email",data.email);
+            localStorage.setItem("name",data.name);
+            localStorage.setItem("phone",data.phone);
             alert("logged Successful");
+
         }
         else{
             alert("loggin failed");
@@ -23,4 +27,5 @@ document.getElementById("log2").addEventListener("submit",function(e){
         console.error(err);
         alert("error occured");
     })
+    fetch
 })
