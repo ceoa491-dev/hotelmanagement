@@ -1,11 +1,13 @@
 window.onload=function(){
     let username=localStorage.getItem("name");
+    
     console.log(username);
+    let card=document.getElementById("card");
     fetch("https://hotelmanagementbackend-production-a758.up.railway.app/userhome")
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
-        let card=document.getElementById("card");
+        
         card.innerHTML="";
         data.forEach(all=>{
             let carditems=document.createElement("div");
@@ -21,10 +23,11 @@ window.onload=function(){
         console.error(err);
         alert("error occured to load data");
     })
-}
-document.getElementById("carditems").addEventListener("click",function(e){
+
+document.getElementById("card").addEventListener("click",function(e){
     let item = e.target.closest(".carditems");
     if(item){
     window.location.href="userinhotel.html";
     }
 })
+}   
