@@ -17,7 +17,7 @@ document.getElementById("log2").addEventListener("submit",function(e){
             localStorage.setItem("name",data.name);
             localStorage.setItem("phone",data.phone);
             alert("logged Successful");
-
+            window.location.href="userhome.html";
         }
         else{
             alert("loggin failed");
