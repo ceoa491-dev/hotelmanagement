@@ -4,7 +4,8 @@ document.getElementById("room").addEventListener("click",function(e){
     fetch("https://hotelmanagementbackend-production-a758.up.railway.app/getroom")
     .then(res=>res.json())
     .then(data=>{
-        console.log(data.status);
+        console.log("inside data");
+        console.log(data);
         let container=document.getElementById("card");
         
         data.forEach(room=>{
