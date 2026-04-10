@@ -6,7 +6,7 @@ body{
 .un{
     color: white;
     font-family: Showcard Gothic;
-    margin-right: 1100px;
+
 }
 
 .hname{
@@ -35,10 +35,13 @@ body{
     padding: 10px 20px;
 }
 .hname{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: xx-large;
     font-weight: bolder;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    
 }
 .btn{
     display: flex;

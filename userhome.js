@@ -30,6 +30,7 @@ document.getElementById("card").addEventListener("click",function(e){
     if(item){
         let hotelname=item.querySelector(".hname").innerText;   
     localStorage.setItem("namehh",hotelname);
+    localStorage.setItem("name",username);
     window.location.href="userinhotel.html";
     
     }

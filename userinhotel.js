@@ -2,7 +2,8 @@
 window.onload=function(){
     let head=localStorage.getItem("namehh");
     document.getElementById("hname").innerText=head;
-
+    let un=localStorage.getItem("name");
+    document.getElementById("un").innerText+=un;
 }
 document.getElementById("room").addEventListener("click",function(e){
     e.preventDefault();
