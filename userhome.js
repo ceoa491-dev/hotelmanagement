@@ -28,7 +28,8 @@ window.onload=function(){
 document.getElementById("card").addEventListener("click",function(e){
     let item = e.target.closest(".carditems");
     if(item){
-    localStorage.setItem("namehh",document.getElementById("hname").value);
+        let hotelname=item.querySelector(".hname").innerText;   
+    localStorage.setItem("namehh",hotelname);
     window.location.href="userinhotel.html";
     
     }
