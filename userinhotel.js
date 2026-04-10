@@ -94,9 +94,13 @@ document.getElementById("food").addEventListener("click",function(e){
             let disprice=document.createElement("label");
             disprice.className="dprice";
             disprice.innerText="Price : "+food.disprice;
+            let btnf=document.createElement("button");
+            btnf.className="buy";
+            btnf.innerText="buy"
             cardf.appendChild(imagecontainerf);
             cardf.appendChild(dis);
             cardf.appendChild(disprice);
+            cardf.appendChild(btnf);
             containerf.appendChild(cardf);
         })
         document.getElementById("cls").addEventListener("click",function(){
