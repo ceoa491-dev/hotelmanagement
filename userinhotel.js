@@ -6,6 +6,8 @@ window.onload=function(){
     document.getElementById("un").innerText+=un;
     let em=localStorage.getItem("email");
     console.log(em);
+    let he=localStorage.getItem("hemail");
+    console.log(he);
 }
 document.getElementById("room").addEventListener("click",function(e){
     e.preventDefault();
@@ -50,7 +52,7 @@ document.getElementById("room").addEventListener("click",function(e){
             container.appendChild(card);
             
             btn.addEventListener("click",function(){
-
+                let hemail=localStorage.getItem("hemail");
                 fetch("https://hotelmanagementbackend-production-a758.up.railway.app/reserved",{
                     method:"POST",
                     headers:{"Content-Type":"application/json"},
@@ -58,12 +60,13 @@ document.getElementById("room").addEventListener("click",function(e){
                         "room":room.txtno,
                         "roomprice":room.txtprice,
                         "name":localStorage.getItem("name"),
-                        "email":localStorage.getItem("email")
+                        "email":localStorage.getItem("email"),
+                        "hemail":hemail
                     })
                 })
                 .then(res=>res.json())
                 .then(data=>{
-                    console.log(data.room,data.roomprice,data.name,data.email);
+                    console.log(data.room,data.roomprice,data.name,data.email,data.hemail);
                     alert("Room Reserved Successful");
 
                 })
@@ -137,7 +140,8 @@ document.getElementById("food").addEventListener("click",function(e){
                         "disname":food.dis,
                         "disprice":food.disprice,
                         "name":localStorage.getItem("name"),
-                        "email":localStorage.getItem("email")
+                        "email":localStorage.getItem("email"),
+                        "hemail":localStorage.getItem("hemail")
                     })
                 })
                 .then(res=>res.json())
@@ -168,7 +172,8 @@ document.getElementById("roomrs").addEventListener("click",function(e){
     document.getElementById("lis").style="display:flex";
     let name=localStorage.getItem("name");
     let email=localStorage.getItem("email");
-    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getresroom?email=${email}&name=${name}`)
+    let hemail=localStorage.getItem("hemail");
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getresroom?email=${email}&name=${name}$hemail=${hemail}`)
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
@@ -205,7 +210,8 @@ document.getElementById("foodor").addEventListener("click",function(e){
     document.getElementById("lisf").style="display:flex";
     let name=localStorage.getItem("name");
     let email=localStorage.getItem("email");
-    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getfoods?email=${email}&name=${name}`)
+    let hemail=localStorage.getItem("hemail");
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getfoods?email=${email}&name=${name}$hemail=${hemail}`)
     .then(res=>res.json())
     .then(data=>{
         console.log(data);

@@ -7,15 +7,14 @@ window.onload=function(){
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
-        
         card.innerHTML="";
         data.forEach(all=>{
             let carditems=document.createElement("div");
             carditems.className="carditems";
+            carditems.dataset.email = all.email;
             let hnamel=document.createElement("label");
             hnamel.className="hname";
             hnamel.innerText=all.hname;
-            
             carditems.appendChild(hnamel);
             card.appendChild(carditems);
         })
@@ -28,9 +27,11 @@ window.onload=function(){
 document.getElementById("card").addEventListener("click",function(e){
     let item = e.target.closest(".carditems");
     if(item){
-        let hotelname=item.querySelector(".hname").innerText;   
+        let hotelname=item.querySelector(".hname").innerText; 
+        let email = item.dataset.email;  
     localStorage.setItem("namehh",hotelname);
     localStorage.setItem("name",username);
+    localStorage.setItem("hemail",email);
     window.location.href="userinhotel.html";
     
     }
