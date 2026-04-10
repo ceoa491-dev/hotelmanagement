@@ -15,6 +15,8 @@ window.onload=function(){
             let hnamel=document.createElement("label");
             hnamel.className="hname";
             hnamel.innerText=all.hname;
+            let hnamel2=all.hname;
+            localStorage.setItem("namehh",hnamel2);
             carditems.appendChild(hnamel);
             card.appendChild(carditems);
         })
@@ -27,7 +29,7 @@ window.onload=function(){
 document.getElementById("card").addEventListener("click",function(e){
     let item = e.target.closest(".carditems");
     if(item){
-        localStorage.setItem("namehh",hnamel);
+        
     window.location.href="userinhotel.html";
     
     }
