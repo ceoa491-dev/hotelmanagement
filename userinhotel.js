@@ -178,6 +178,8 @@ document.getElementById("roomrs").addEventListener("click",function(e){
             data.data.forEach(room=>{
             let card=document.createElement("div");
             card.className="carditems";
+            card.style.height="500px";
+            card.style.width="500px";
             let roomno=document.createElement("label");
             roomno.className="roomno";
             roomno.innerText="Room No : "+room.room;
