@@ -64,8 +64,8 @@ document.getElementById("room").addEventListener("click",function(e){
                 .then(res=>res.json())
                 .then(data=>{
                     console.log(data.room,data.roomprice,data.name,data.email);
-
                     alert("Room Reserved Successful");
+
                 })
                 .catch(err=>{
                     console.error(err);
@@ -162,5 +162,38 @@ document.getElementById("food").addEventListener("click",function(e){
         console.error(err);
         alert("Error Loadind Food")
     })
+})
+document.getElementById("roomrs").addEventListener("click",function(e){
+    e.preventDefault();
+    document.getElementById("lis").style="display:flex";
+    let name=localStorage.getItem("name");
+    let email=localStorage.getItem("email");
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getresroom?email=${email}&name=${name}`)
+    .then(res=>res.json())
+    .then(data=>{
+        console.log(data);
+        let container=document.getElementById("lisin");
+        container.innerHTML=""; 
+        if(data.status=="success"){
+            let card=document.createElement("div");
+            card.className="carditems";
+            let roomno=document.createElement("label");
+            roomno.className="roomno";
+            roomno.innerText="Room No : "+data.room;
+            let price=document.createElement("label");
+            price.className="roomprice";
+            price.innerText="Price : "+data.roomprice;
+            card.appendChild(roomno);
+            card.appendChild(price);
+            container.appendChild(card);
+        }
+        else{
+            alert(data.message);
+        }
+        })
+        .catch(err=>{
+    console.error(err);
+    alert("Error Getting Rooms");
+})
 })
 
