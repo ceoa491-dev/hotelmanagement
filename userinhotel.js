@@ -202,7 +202,7 @@ document.getElementById("roomrs").addEventListener("click",function(e){
 })
 document.getElementById("foodor").addEventListener("click",function(e){
     e.preventDefault();
-    document.getElementById("lis").style="display:flex";
+    document.getElementById("lisf").style="display:flex";
     let name=localStorage.getItem("name");
     let email=localStorage.getItem("email");
     fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getfoods?email=${email}&name=${name}`)
@@ -214,12 +214,12 @@ document.getElementById("foodor").addEventListener("click",function(e){
         if(data.status=="success"){
             data.data.forEach(food=>{
             let cardf=document.createElement("div");
-            cardf.className="carditems";
+            cardf.className="carditemsf";
             cardf.style.height="500px";
             cardf.style.width="500px";
             let dis=document.createElement("label");
             dis.className="dish";
-            dis.innerText="Dish : "+food.dis;
+            dis.innerText="Dish : "+food.disname;
             let disprice=document.createElement("label");
             disprice.className="dprice";
             disprice.innerText="Price : "+food.disprice;
