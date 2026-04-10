@@ -209,23 +209,23 @@ document.getElementById("foodor").addEventListener("click",function(e){
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
-        let container=document.getElementById("lisin");
-        container.innerHTML=""; 
+        let containerf=document.getElementById("lisinf");
+        containerf.innerHTML=""; 
         if(data.status=="success"){
             data.data.forEach(food=>{
-            let card=document.createElement("div");
-            card.className="carditems";
-            card.style.height="500px";
-            card.style.width="500px";
-            let roomno=document.createElement("label");
-            roomno.className="roomno";
-            roomno.innerText="Room No : "+food.room;
-            let price=document.createElement("label");
-            price.className="roomprice";
-            price.innerText="Price : "+food.roomprice;
-            card.appendChild(roomno);
-            card.appendChild(price);
-            container.appendChild(card);
+            let cardf=document.createElement("div");
+            cardf.className="carditems";
+            cardf.style.height="500px";
+            cardf.style.width="500px";
+            let dis=document.createElement("label");
+            dis.className="dish";
+            dis.innerText="Dish : "+food.dis;
+            let disprice=document.createElement("label");
+            disprice.className="dprice";
+            disprice.innerText="Price : "+food.disprice;
+            cardf.appendChild(dis);
+            cardf.appendChild(disprice);
+            containerf.appendChild(cardf);
             })
         }
         else{
