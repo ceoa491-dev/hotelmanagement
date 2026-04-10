@@ -1,7 +1,9 @@
 window.onload=function(){
 let hotelname=localStorage.getItem("hname");
+let email=localStorage.getItem("email");
 document.getElementById("namehotel").innerText=hotelname;
 console.log(hotelname);
+console.log(email);
 }
 document.getElementById("addr").addEventListener("click",function(e){
     e.preventDefault();
@@ -14,9 +16,11 @@ document.getElementById("formw").addEventListener("submit",function(e){
         let txtno=document.getElementById("txtno").value;
         let txtprice=document.getElementById("txtprice").value;
         let files=document.getElementById("imgupp").files;
+        let email=localStorage.getItem("email");
         let formData=new FormData();
         formData.append("txtno",txtno);
         formData.append("txtprice",txtprice);
+        formData.append("email",email);
         for(let i =0;i<files.length;i++){
             formData.append("images",files[i]); 
         }
@@ -55,10 +59,13 @@ document.getElementById("formw2").addEventListener("submit",function(e){
     let dis=document.getElementById("dis").value;
     let disprice=document.getElementById("disprice").value;
     let files2=document.getElementById("imgupp2").files;
+    let email=localStorage.getItem("email");
+
     console.log(disprice);
     let formData2=new FormData();
     formData2.append("dis",dis);
     formData2.append("disprice",disprice);
+    formData2.append("email",email);
     for(let i=0;i<files2.length;i++){
         formData2.append("images",files2[i]);
     }
@@ -92,7 +99,8 @@ document.getElementById("formw2").addEventListener("submit",function(e){
 document.getElementById("viewr").addEventListener("click",function(e){
     e.preventDefault();
     document.getElementById("lis").style="display:flex";
-    fetch("https://hotelmanagementbackend-production-a758.up.railway.app/getroom")
+    let email=localStorage.getItem("email");
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getroom?email=${email}`)
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
@@ -142,7 +150,8 @@ document.getElementById("viewr").addEventListener("click",function(e){
 document.getElementById("viewf").addEventListener("click",function(e){
     e.preventDefault();
     document.getElementById("lisf").style="display:flex";
-    fetch("https://hotelmanagementbackend-production-a758.up.railway.app/getfood")
+    let email=localStorage.getItem("email");
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getfood?$email${email}`)
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
@@ -168,7 +177,7 @@ document.getElementById("viewf").addEventListener("click",function(e){
                 imagecontainerf.append(image);
 
             })
-            let dis=document.createElement("label");
+            let dis=document.createElement("label");    
             dis.className="dish";
             dis.innerText="Dish : "+food.dis;
             let disprice=document.createElement("label");
