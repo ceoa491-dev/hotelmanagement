@@ -42,13 +42,36 @@ document.getElementById("room").addEventListener("click",function(e){
             price.innerText="Price : "+room.txtprice;
             let btn=document.createElement("button");
             btn.className="book";
-            btn.innerText="Book"
+            btn.innerText="Book";
             card.appendChild(imagecontainer);
             card.appendChild(roomno);
             card.appendChild(price);
             card.appendChild(btn);
             container.appendChild(card);
             
+            btn.addEventListener("click",function(){
+
+                fetch("https://hotelmanagementbackend-production-a758.up.railway.app/reserved",{
+                    method:"POST",
+                    headers:{"Content-Type":"application/json"},
+                    body:JSON.stringify({
+                        "room":room.txtno,
+                        "roomprice":room.txtprice,
+                        "name":localStorage.getItem("name"),
+                        "email":localStorage.getItem("email")
+                    })
+                })
+                .then(res=>res.json())
+                .then(data=>{
+                    console.log(data.room,data.roomprice,data.name,data.email);
+
+                    alert("Room Reserved Successful");
+                })
+                .catch(err=>{
+                    console.error(err);
+                    alert("Error Room Reserving");
+                })
+            })
         })
         document.getElementById("cls").addEventListener("click",function(){
                     this.style.display="none"
