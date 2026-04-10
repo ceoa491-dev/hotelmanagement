@@ -40,7 +40,13 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     
 }
-
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+}
 .room{
     background-color: blueviolet;
     color: white;
@@ -226,4 +232,20 @@ padding: 6px;
     border-radius: 4px;
     min-width: 200px;
     text-align: center;
+}
+.book{
+    background-color: rgb(18, 220, 69);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 40px;
+    width: 140px;
+    border: 1px solid white;
+    font-weight: bolder;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+.book:hover{
+    background-color: rgb(167, 234, 85);
+    height: 43px;
+    width: 143px;
 }

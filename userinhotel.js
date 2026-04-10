@@ -32,9 +32,12 @@ document.getElementById("room").addEventListener("click",function(e){
             let price=document.createElement("label");
             price.className="roomprice";
             price.innerText="Price : "+room.txtprice;
+            let btn=document.createElement("button");
+            btn.className="book";
             card.appendChild(imagecontainer);
             card.appendChild(roomno);
             card.appendChild(price);
+            card.appendChild(btn);
             container.appendChild(card);
             
         })
