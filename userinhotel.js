@@ -4,6 +4,8 @@ window.onload=function(){
     document.getElementById("hname").innerText=head;
     let un=localStorage.getItem("name");
     document.getElementById("un").innerText+=un;
+    let em=localStorage.getItem("email");
+    console.log(em);
 }
 document.getElementById("room").addEventListener("click",function(e){
     e.preventDefault();
@@ -111,12 +113,14 @@ document.getElementById("food").addEventListener("click",function(e){
                     body:JSON.stringify({
                         "disname":food.dis,
                         "disprice":food.disprice,
-                        "name":localStorage.getItem("name")
+                        "name":localStorage.getItem("name"),
+                        "email":localStorage.getItem("email")
                     })
                 })
                 .then(res=>res.json())
                 .then(data=>{
-                    console.log(data);
+                    console.log(data.dish,data.disprice);
+
                     alert("Order Placed Successful");
                 })
                 .catch(err=>{
