@@ -11,8 +11,9 @@ window.onload=function(){
 }
 document.getElementById("room").addEventListener("click",function(e){
     e.preventDefault();
+    let hemail=localStorage.getItem("hemail");
     document.getElementById("lis").style="display:flex";
-    fetch("https://hotelmanagementbackend-production-a758.up.railway.app/getroom")
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getroom?email=${hemail}`)
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
@@ -90,7 +91,8 @@ document.getElementById("room").addEventListener("click",function(e){
 document.getElementById("food").addEventListener("click",function(e){
     e.preventDefault();
     document.getElementById("lisf").style="display:flex";
-    fetch("https://hotelmanagementbackend-production-a758.up.railway.app/getfood")
+    let hemail=localStorage.getItem("hemail");
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getfood?email=${hemail}`)
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
@@ -173,7 +175,7 @@ document.getElementById("roomrs").addEventListener("click",function(e){
     let name=localStorage.getItem("name");
     let email=localStorage.getItem("email");
     let hemail=localStorage.getItem("hemail");
-    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getresroom?email=${email}&name=${name}$hemail=${hemail}`)
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getresroom?email=${email}&name=${name}&hemail=${hemail}`)
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
@@ -211,7 +213,7 @@ document.getElementById("foodor").addEventListener("click",function(e){
     let name=localStorage.getItem("name");
     let email=localStorage.getItem("email");
     let hemail=localStorage.getItem("hemail");
-    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getfoods?email=${email}&name=${name}$hemail=${hemail}`)
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getfoods?email=${email}&name=${name}&hemail=${hemail}`)
     .then(res=>res.json())
     .then(data=>{
         console.log(data);

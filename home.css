@@ -313,6 +313,21 @@ margin-bottom: 10px;
     transform: translateY(-3px);
     background-color: rgb(208, 67, 67);
 }
+
+.fo{
+    background-color: rgb(101, 3, 47);
+    border-radius: 6px;
+    height: 50px;
+    width: 180px;
+    color: white;
+    font-weight: bolder;
+    font-size:large;
+    transition: all 0.2s ease-in-out;
+}
+.fo:hover{
+    transform: translateY(-3px);
+    background-color: rgb(208, 67, 67);
+}
 .addr_form{
     display: none;
     

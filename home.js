@@ -199,4 +199,81 @@ document.getElementById("viewf").addEventListener("click",function(e){
         alert("Error Loadind Food")
     })
 })
+document.getElementById("res").addEventListener("click",function(e){
+    e.preventDefault();
+    document.getElementById("lis").style="display:flex";
+    let name=localStorage.getItem("name");
+    let email=localStorage.getItem("email");
+    let hemail=localStorage.getItem("hemail");
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getresroomh?hemail=${hemail}`)
+    .then(res=>res.json())
+    .then(data=>{
+        console.log(data);
+        let container=document.getElementById("lisin");
+        container.innerHTML=""; 
+        if(data.status=="success"){
+            data.data.forEach(room=>{
+            let card=document.createElement("div");
+            card.className="carditems";
+            card.style.height="100px";
+            card.style.width="500px";
+            let roomno=document.createElement("label");
+            roomno.className="roomno";
+            roomno.innerText="Room No : "+room.room;
+            let price=document.createElement("label");
+            price.className="roomprice";
+            price.innerText="Price : "+room.roomprice;
+            card.appendChild(roomno);
+            card.appendChild(price);
+            container.appendChild(card);
+            })
+        }
+        else{
+            alert(data.message);
+        }
+        })
+        .catch(err=>{
+    console.error(err);
+    alert("Error Getting Rooms");
+})
+})
+document.getElementById("foodor").addEventListener("click",function(e){
+    e.preventDefault();
+    document.getElementById("lisf").style="display:flex";
+    let name=localStorage.getItem("name");
+    let email=localStorage.getItem("email");
+    let hemail=localStorage.getItem("hemail");
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getfoodsh?hemail=${hemail}`)
+    .then(res=>res.json())
+    .then(data=>{
+        console.log(data);
+        let containerf=document.getElementById("lisinf");
+        containerf.innerHTML=""; 
+        if(data.status=="success"){
+            data.data.forEach(food=>{
+            let cardf=document.createElement("div");
+            cardf.className="carditemsf";
+            cardf.style.height="100px";
+            cardf.style.width="500px";
+            let dis=document.createElement("label");
+            dis.className="dish";
+            dis.innerText="Dish : "+food.disname;
+            let disprice=document.createElement("label");
+            disprice.className="dprice";
+            disprice.innerText="Price : "+food.disprice;
+            cardf.appendChild(dis);
+            cardf.appendChild(disprice);
+            containerf.appendChild(cardf);
+            })
+        }
+        else{
+            alert(data.message);
+        }
+        })
+        .catch(err=>{
+    console.error(err);
+    alert("Error Getting foods");
+})
+})
+
 
