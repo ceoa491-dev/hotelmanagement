@@ -106,7 +106,7 @@ document.getElementById("food").addEventListener("click",function(e){
             btnf.addEventListener("click",function(){
                 let d=localStorage.setItem("dish",food.dis);
                 let dp=localStorage.setItem("disprice",food.disprice);
-                window.location.href="foodorders.html";
+
                 console.log(d,dp);
             })
         })
