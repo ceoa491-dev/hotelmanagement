@@ -178,7 +178,7 @@ document.getElementById("roomrs").addEventListener("click",function(e){
             data.data.forEach(room=>{
             let card=document.createElement("div");
             card.className="carditems";
-            card.style.height="500px";
+            card.style.height="100px";
             card.style.width="500px";
             let roomno=document.createElement("label");
             roomno.className="roomno";
@@ -215,7 +215,7 @@ document.getElementById("foodor").addEventListener("click",function(e){
             data.data.forEach(food=>{
             let cardf=document.createElement("div");
             cardf.className="carditemsf";
-            cardf.style.height="500px";
+            cardf.style.height="100px";
             cardf.style.width="500px";
             let dis=document.createElement("label");
             dis.className="dish";
