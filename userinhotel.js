@@ -96,16 +96,18 @@ document.getElementById("food").addEventListener("click",function(e){
             disprice.innerText="Price : "+food.disprice;
             let btnf=document.createElement("button");
             btnf.className="buy";
-            btnf.innerText="Buy"
+            btnf.innerText="Buy";
             cardf.appendChild(imagecontainerf);
             cardf.appendChild(dis);
             cardf.appendChild(disprice);
             cardf.appendChild(btnf);
             containerf.appendChild(cardf);
-            document.getElementById("buy").addEventListener("click",function(){
-                localStorage.getItem("dish",food.dis);
-                localStorage.getItem("disprice",food.disprice);
-                window.location.href="foodorders.html"
+            
+            btnf.addEventListener("click",function(){
+                let d=localStorage.setItem("dish",food.dis);
+                let dp=localStorage.setItem("disprice",food.disprice);
+                window.location.href="foodorders.html";
+                console.log(d,dp);
             })
         })
         document.getElementById("cls").addEventListener("click",function(){
