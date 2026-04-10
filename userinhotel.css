@@ -225,3 +225,87 @@ padding: 6px;
     height: 150px;
     width: 150px;
 }
+.lis{
+display: flex;
+display: none;
+align-items: center;
+justify-content: center;
+}
+.lisin{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-height: 900px;
+    width: 82%;
+    overflow-y: auto;
+    overflow-x: hidden;
+background-color: white;
+align-items: center;
+justify-content: center;
+border: 1px solid black;
+border-radius: 10px;
+padding: 20px;
+gap: 30px;
+justify-content: space-between;
+}
+.carditems{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+        height: 250px;
+    width: 85%;
+background-color: rgb(235, 177, 70);
+border: 1px solid black;
+border-radius: 10px;
+padding: 6px;
+
+}
+.roomim{
+    height: 140px;
+    width: 140px;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin:auto;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 60%;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.roomim:hover{
+    height: 150px;
+    width: 150px;
+}
+.roomno{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    background-color: rgb(99, 56, 139);
+    color: white;
+    margin-top: auto;
+    height: 30px;
+    text-align: center;
+    text-align: justify;
+    width: 250px;
+    margin-left: auto;
+    text-align: center;
+    border-radius: 4px;
+    min-width: 200px;
+    text-align: center;
+}
+.roomprice{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    height: 30px;
+    text-align: center;
+    text-align: justify;
+    width: 250px;
+    background-color: rgb(3, 87, 27);
+    color: white;
+    text-align: center;
+    margin-top: auto;
+    margin-left: auto;
+    border-radius: 4px;
+    min-width: 200px;
+    text-align: center;
+}
