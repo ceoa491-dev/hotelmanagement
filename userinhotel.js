@@ -104,10 +104,10 @@ document.getElementById("food").addEventListener("click",function(e){
             containerf.appendChild(cardf);
             
             btnf.addEventListener("click",function(){
-                let d=localStorage.setItem("dish",food.dis);
-                let dp=localStorage.setItem("disprice",food.disprice);
+                localStorage.setItem("dish",food.dis);
+                localStorage.setItem("disprice",food.disprice);
 
-                console.log(d,dp);
+                console.log(food.dis,food.disprice);
             })
         })
         document.getElementById("cls").addEventListener("click",function(){
