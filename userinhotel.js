@@ -200,4 +200,43 @@ document.getElementById("roomrs").addEventListener("click",function(e){
     alert("Error Getting Rooms");
 })
 })
+document.getElementById("foodor").addEventListener("click",function(e){
+    e.preventDefault();
+    document.getElementById("lis").style="display:flex";
+    let name=localStorage.getItem("name");
+    let email=localStorage.getItem("email");
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getfoods?email=${email}&name=${name}`)
+    .then(res=>res.json())
+    .then(data=>{
+        console.log(data);
+        let container=document.getElementById("lisin");
+        container.innerHTML=""; 
+        if(data.status=="success"){
+            data.data.forEach(food=>{
+            let card=document.createElement("div");
+            card.className="carditems";
+            card.style.height="500px";
+            card.style.width="500px";
+            let roomno=document.createElement("label");
+            roomno.className="roomno";
+            roomno.innerText="Room No : "+food.room;
+            let price=document.createElement("label");
+            price.className="roomprice";
+            price.innerText="Price : "+food.roomprice;
+            card.appendChild(roomno);
+            card.appendChild(price);
+            container.appendChild(card);
+            })
+        }
+        else{
+            alert(data.message);
+        }
+        })
+        .catch(err=>{
+    console.error(err);
+    alert("Error Getting foods");
+})
+})
+
+
 
