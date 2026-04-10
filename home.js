@@ -204,8 +204,8 @@ document.getElementById("res").addEventListener("click",function(e){
     document.getElementById("lis").style="display:flex";
     let name=localStorage.getItem("name");
     let email=localStorage.getItem("email");
-    let hemail=localStorage.getItem("hemail");
-    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getresroomh?hemail=${hemail}`)
+    
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getresroomh?hemail=${email}`)
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
@@ -242,8 +242,8 @@ document.getElementById("fo").addEventListener("click",function(e){
     document.getElementById("lisf").style="display:flex";
     let name=localStorage.getItem("name");
     let email=localStorage.getItem("email");
-    let hemail=localStorage.getItem("hemail");
-    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getfoodsh?hemail=${hemail}`)
+    
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getfoodsh?hemail=${email}`)
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
