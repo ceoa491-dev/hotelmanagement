@@ -104,10 +104,25 @@ document.getElementById("food").addEventListener("click",function(e){
             containerf.appendChild(cardf);
             
             btnf.addEventListener("click",function(){
-                localStorage.setItem("dish",food.dis);
-                localStorage.setItem("disprice",food.disprice);
 
-                console.log(food.dis,food.disprice);
+                fetch("https://hotelmanagementbackend-production-a758.up.railway.app/order",{
+                    method:"POST",
+                    headers:{"Content-Type":"application/json"},
+                    body:JSON.stringify({
+                        "disname":food.dis,
+                        "disprice":food.disprice,
+                        "name":localStorage.getItem("name")
+                    })
+                })
+                .then(res=>res.json())
+                .then(data=>{
+                    console.log(data);
+                    alert("Order Placed Successful");
+                })
+                .catch(err=>{
+                    console.error(err);
+                    alert("Error Placing Order");
+                })
             })
         })
         document.getElementById("cls").addEventListener("click",function(){
