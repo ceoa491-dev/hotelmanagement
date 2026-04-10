@@ -1,4 +1,9 @@
 
+window.onload=function(){
+    let head=localStorage.getItem("name");
+    document.getElementById("hname").innerText=head;
+
+}
 document.getElementById("room").addEventListener("click",function(e){
     e.preventDefault();
     document.getElementById("lis").style="display:flex";
@@ -34,6 +39,7 @@ document.getElementById("room").addEventListener("click",function(e){
             price.innerText="Price : "+room.txtprice;
             let btn=document.createElement("button");
             btn.className="book";
+            btn.innerText="Book"
             card.appendChild(imagecontainer);
             card.appendChild(roomno);
             card.appendChild(price);

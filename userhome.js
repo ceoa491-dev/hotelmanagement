@@ -27,7 +27,9 @@ window.onload=function(){
 document.getElementById("card").addEventListener("click",function(e){
     let item = e.target.closest(".carditems");
     if(item){
+        localStorage.setItem("namehh",username);
     window.location.href="userinhotel.html";
+    
     }
 })
 }   
