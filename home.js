@@ -195,7 +195,7 @@ document.getElementById("viewf").addEventListener("click",function(e){
                 })
     })
     .catch(err=>{
-        console.error(err);
+        console.log(err)
         alert("Error Loadind Food")
     })
 })
