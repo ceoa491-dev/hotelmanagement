@@ -131,35 +131,7 @@ body{
     height: 43px;
     width: 143px;
 }
-.carditems{
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-        height: 250px;
-    width: 85%;
-background-color: rgb(235, 177, 70);
-border: 1px solid black;
-border-radius: 10px;
-padding: 6px;
 
-}
-.img{
-    height: 140px;
-    width: 140px;
-    border: 1px solid white;
-    border-radius: 4px;
-    margin:auto;
-    gap: 10px;
-    flex-wrap: wrap;
-    max-width: 60%;
-    transition: all 0.2s ease-in-out;
-
-}
-
-.img:hover{
-    height: 150px;
-    width: 150px;
-}
 .disroom{
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
@@ -172,22 +144,6 @@ padding: 6px;
     width: 250px;
     margin-left: auto;
     text-align: center;
-    border-radius: 4px;
-    min-width: 200px;
-    text-align: center;
-}
-.price{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
-    height: 30px;
-    text-align: center;
-    text-align: justify;
-    width: 250px;
-    background-color: rgb(3, 87, 27);
-    color: white;
-    text-align: center;
-    margin-top: auto;
-    margin-left: auto;
     border-radius: 4px;
     min-width: 200px;
     text-align: center;
@@ -212,19 +168,7 @@ padding: 6px;
     gap: 10px;
     flex-wrap: wrap;
 }
-.img{
-    height: 140px;
-    width: 140px;
-    border: 1px solid white;
-    border-radius: 4px;
-    margin:auto;
-    transition: all 0.2s ease-in-out;
-}
 
-.img:hover{
-    height: 150px;
-    width: 150px;
-}
 .lis{
 display: flex;
 display: none;
