@@ -151,7 +151,7 @@ document.getElementById("viewf").addEventListener("click",function(e){
     e.preventDefault();
     document.getElementById("lisf").style="display:flex";
     let email=localStorage.getItem("email");
-    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getfood?$email${email}`)
+    fetch(`https://hotelmanagementbackend-production-a758.up.railway.app/getfood?$email=${email}`)
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
