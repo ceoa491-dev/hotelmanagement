@@ -59,3 +59,55 @@ document.getElementById("room").addEventListener("click",function(e){
         alert("Error Loading Rooms");
     })
 })
+document.getElementById("food").addEventListener("click",function(e){
+    e.preventDefault();
+    document.getElementById("lisf").style="display:flex";
+    fetch("https://hotelmanagementbackend-production-a758.up.railway.app/getfood")
+    .then(res=>res.json())
+    .then(data=>{
+        console.log(data);
+        let containerf=document.getElementById("lisinf");
+        containerf.innerHTML="";
+        data.forEach(food=>{
+            let cardf=document.createElement("div");
+            cardf.className="carditemsf";
+            let imagecontainerf=document.createElement("div");
+            imagecontainerf.className="imagecontainerf";
+            imagecontainerf.style.display="flex";
+            imagecontainerf.style.gap="10px";
+            food.images.forEach(img=>{
+                let image=document.createElement("img");
+                image.src="data:image/jpeg;base64,"+img;
+                image.className="fimg";
+                image.addEventListener("click",function(){
+                    
+                 document.getElementById("pop").style.display="flex";
+                 document.getElementById("popupimg").src=image.src;
+                 document.getElementById("cls").style.display="flex";
+                })
+                imagecontainerf.append(image);
+
+            })
+            let dis=document.createElement("label");
+            dis.className="dish";
+            dis.innerText="Dish : "+food.dis;
+            let disprice=document.createElement("label");
+            disprice.className="dprice";
+            disprice.innerText="Price : "+food.disprice;
+            cardf.appendChild(imagecontainerf);
+            cardf.appendChild(dis);
+            cardf.appendChild(disprice);
+            containerf.appendChild(cardf);
+        })
+        document.getElementById("cls").addEventListener("click",function(){
+                    this.style.display="none"
+                    document.getElementById("pop").style.display="none";
+                    
+                })
+    })
+    .catch(err=>{
+        console.error(err);
+        alert("Error Loadind Food")
+    })
+})
+
