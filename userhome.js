@@ -1,6 +1,6 @@
 window.onload=function(){
     let username=localStorage.getItem("name");
-    
+    document.getElementById("un").innerText+=username;
     console.log(username);
     let card=document.getElementById("card");
     fetch("https://hotelmanagementbackend-production-a758.up.railway.app/userhome")
@@ -27,7 +27,7 @@ window.onload=function(){
 document.getElementById("card").addEventListener("click",function(e){
     let item = e.target.closest(".carditems");
     if(item){
-        localStorage.setItem("namehh",username);
+        localStorage.setItem("namehh",hnamel);
     window.location.href="userinhotel.html";
     
     }

@@ -1,6 +1,6 @@
 
 window.onload=function(){
-    let head=localStorage.getItem("name");
+    let head=localStorage.getItem("namehh");
     document.getElementById("hname").innerText=head;
 
 }
