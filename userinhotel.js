@@ -105,7 +105,6 @@ document.getElementById("food").addEventListener("click",function(e){
             document.getElementById("buy").addEventListener("click",function(){
                 localStorage.getItem("dish",food.dis);
                 localStorage.getItem("disprice",food.disprice);
-                localStorage.getItem("image",image);
                 window.location.href="foodorders.html"
             })
         })
