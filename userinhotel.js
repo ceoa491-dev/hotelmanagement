@@ -175,17 +175,19 @@ document.getElementById("roomrs").addEventListener("click",function(e){
         let container=document.getElementById("lisin");
         container.innerHTML=""; 
         if(data.status=="success"){
+            data.data.forEach(room=>{
             let card=document.createElement("div");
             card.className="carditems";
             let roomno=document.createElement("label");
             roomno.className="roomno";
-            roomno.innerText="Room No : "+data.room;
+            roomno.innerText="Room No : "+room.room;
             let price=document.createElement("label");
             price.className="roomprice";
-            price.innerText="Price : "+data.roomprice;
+            price.innerText="Price : "+room.roomprice;
             card.appendChild(roomno);
             card.appendChild(price);
             container.appendChild(card);
+            })
         }
         else{
             alert(data.message);
