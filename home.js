@@ -237,7 +237,7 @@ document.getElementById("res").addEventListener("click",function(e){
     alert("Error Getting Rooms");
 })
 })
-document.getElementById("foodor").addEventListener("click",function(e){
+document.getElementById("fo").addEventListener("click",function(e){
     e.preventDefault();
     document.getElementById("lisf").style="display:flex";
     let name=localStorage.getItem("name");

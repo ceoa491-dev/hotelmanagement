@@ -315,7 +315,7 @@ margin-bottom: 10px;
 }
 
 .fo{
-    background-color: rgb(101, 3, 47);
+    background-color: rgb(3, 101, 81);
     border-radius: 6px;
     height: 50px;
     width: 180px;
@@ -326,7 +326,7 @@ margin-bottom: 10px;
 }
 .fo:hover{
     transform: translateY(-3px);
-    background-color: rgb(208, 67, 67);
+    background-color: rgb(74, 177, 169);
 }
 .addr_form{
     display: none;
